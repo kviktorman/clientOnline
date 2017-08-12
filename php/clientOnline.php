@@ -27,7 +27,7 @@
                 $messageResponse = array("status" => -1, "msg" => "Sorry No message response for this request");
                 break;
         }
-
+        // set read write rights for the appended log file
         chmod($logFile, 0766);
     }else{
         $messageResponse = array("status" => -1, "msg" => "Request method not accepted only POST messages are accepted!");
