@@ -1,0 +1,13 @@
+[Unit]
+Description=client is online message send
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/client-online/clientd.sh start
+ExecStop=/opt/client-online/clientd.sh stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
